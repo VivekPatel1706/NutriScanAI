@@ -9,7 +9,3 @@ st.write("# Welcome to NutriScanAI! ")
 st.markdown("NutriScanAI is virtually an AI-Powered Web-Based application that scans a product's ingredient label to identify banned harmful substances in other countries.")
 st.markdown("It is AI usage to scan any given ingredients for possible health risks, identify banned substances across different countries.")
 st.markdown("NutriScanAI simplifies food safety information in real-time with honest data to help users make healthier choices.")
-
-st.sidebar.title("NutriScanAI")
-st.sidebar.markdown("[Admin](Pages/Admin)")
-st.sidebar.markdown("[User](Pages/User)")
