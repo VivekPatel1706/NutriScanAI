@@ -14,3 +14,4 @@ fuzzywuzzy==0.18.0
 joblib==1.4.2
 faiss-cpu
 sentence-transformers==3.2.1
+subprocess
