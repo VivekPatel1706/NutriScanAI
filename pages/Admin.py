@@ -1,4 +1,5 @@
 import streamlit as st
+import subprocess
 from Home import url, db, admin_collection
 from streamlit_cookies_manager import EncryptedCookieManager
 from Database import verify_credentials
@@ -87,6 +88,9 @@ def get_graphs(past_days):
     
     return [fig1, fig2, fig3, fig4, fig6, fig7]
 
+def Train_Model():
+    subprocess.run(['python', 'Ingredient_Model_Train.py'], check=True)
+    
 # Admin Dashboard
 def admin_dashboard():
     check_cookie_expiration()
@@ -97,6 +101,10 @@ def admin_dashboard():
 
     st.title(f"Welcome to the Admin Dashboard, {st.session_state['username']}!")
 
+    st.title("Train Ingredient Scan Model:")
+    if st.button('Train Now!'):
+        run_script()
+        st.success("Model is Trained!")
     # Select past days for data
     past_days = st.selectbox(label="Past Days:", options=[1, 3, 7, 15, 30], index=4)
 
