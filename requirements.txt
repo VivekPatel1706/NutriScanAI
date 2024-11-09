@@ -15,4 +15,4 @@ joblib==1.4.2
 faiss-cpu
 sentence-transformers==3.2.1
 subprocess.run
-pandas
+pandas==2.2.2
