@@ -103,7 +103,7 @@ def admin_dashboard():
 
     st.title("Train Ingredient Scan Model:")
     if st.button('Train Now!'):
-        run_script()
+        Train_Model()
         st.success("Model is Trained!")
     # Select past days for data
     past_days = st.selectbox(label="Past Days:", options=[1, 3, 7, 15, 30], index=4)
