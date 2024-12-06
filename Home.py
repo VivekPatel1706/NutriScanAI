@@ -2,12 +2,10 @@ import streamlit as st
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
-
-url = os.getenv('DB_URL')
-db = os.getenv('DB_NAME')
-admin_collection = os.getenv('DB_ADMIN')
-user_collection = os.getenv('DB_USER')
+db_url = st.secrets["database"]["DB_URL"]
+db_name = st.secrets["database"]["DB_NAME"]
+admin_collection = st.secrets["database"]["DB_ADMIN"]
+user_collection = st.secrets["database"]["DB_USER"]
 
 def main():
     
